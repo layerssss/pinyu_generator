@@ -1,0 +1,104 @@
+<p align=center><font size=6 color=purple>小网页软件——评语生成器</font></p>
+
+<form name=o>
+<p align=center>这个网页程序中含有脚本，请在显示“加载完了 确定”再使用。</p>
+<p align=center>第一编辑区：
+<input type=text  value="" onclick=over() name=o><input type=button value="编辑" onclick=da()></p>
+<p align=center>第二编辑区：
+<input type=text  value="" onclick=over() name=p><input type=button value="编辑" onclick=dp()></p>
+<p align=center><input type=button value="输出" onclick=output()><input type=button value="帮助" onclick=hep()></p>
+
+<p align=center><input type=button value="复位" onclick=re()></p>
+</form>
+<script>
+
+vvvvvv = ""
+bbbbbb = ""
+function over(){
+alert("这个条条只是起一个贮存信息的作用,请勿直接在里面编辑。\n如编辑完毕，请单击“输出”。")
+}
+function output()
+{
+
+document.write("<title>评语编辑结果</title>"+vvvvvv+bbbbbb+"\n请将上面的文字全选，然后复制到Word里编辑")
+}
+
+</script>
+<script src=info.js></script>
+<script src=name.js></script>
+<script>
+function makec(num,nam)
+{
+yin = prompt(num+"号"+nam+"印象","1")*10
+xue = prompt(num+"号"+nam+"学习","1")*10
+gong = prompt(num+"号"+nam+"工作","1")*10
+ji = prompt(num+"号"+nam+"纪律","1")*10
+tea = prompt(num+"号"+nam+"的话","")
+yinv = yinxiang[Math.floor(Math.random()*10)+yin]
+xuev = xuexi[Math.floor(Math.random()*10)+xue]
+gongv = gongzuo[Math.floor(Math.random()*10)+gong]
+jiv = jilv[Math.floor(Math.random()*10)+ji]
+pingyu =yinv+xuev+gongv+jiv+xiv+tea
+}
+
+</script>
+<script>
+function main()
+{
+if(a-1<id)
+{
+makec(a,aaa[a])
+vvvvvv = vvvvvv+"<p>"+a+"号"+aaa[a]+"：</p><p>"+pingyu+"</p><p align=right>"+wei+"</p>"
+a = a+1
+main()
+}
+q = a-1
+document.o.o.value = "已编辑到"+q+"号"+aaa[a-1]
+}
+function mainp()
+{
+if(a-1<id)
+{
+makec(a,aaa[a])
+bbbbbb = bbbbbb+"<p>"+a+"号"+aaa[a]+"：</p><p>"+pingyu+"</p><p align=right>"+wei+"</p>"
+a = a+1
+mainp()
+}
+q = a-1
+document.o.p.value = "已编辑到"+q+"号"+aaa[a-1]
+}
+
+</script>
+<script>
+
+function da()
+{
+wei = prompt("请输入结尾:","")
+id = prompt("您这次打算一直编辑到多少号","")
+xiv = prompt("该编辑区的希望","希望你改正上述缺点。")
+main()
+}
+function dp()
+{
+wei = prompt("请输入结尾:","")
+id = prompt("您这次打算一直编辑到多少号","")
+xiv = prompt("该编辑区的希望","希望你改正上述缺点。")
+mainp()
+}
+
+</script>
+<script>
+function hep(){
+window.open("softhelp.htm","help","width=500,height=400,staturs=no,scrolling=no,scroll=no")
+}
+function re()
+{
+document.o.o.value = ""
+document.o.p.value = ""
+vvvvvv = ""
+bbbbbb = ""
+a = 1
+}
+re()
+</script>
+<p align=center><font size=5 color=purple><a href="http://tangzhixiang.yeah.net/">更多小网页软件和更强版本</font></p></a>
